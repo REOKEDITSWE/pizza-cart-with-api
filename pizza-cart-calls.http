@@ -1,0 +1,58 @@
+GET https://pizza-api.projectcodex.net/api/pizzas
+
+### Create a cart
+GET https://pizza-api.projectcodex.net/api/pizza-cart/create?username=Sphesihle-Mkhize
+
+### Get a cart
+GET https://pizza-api.projectcodex.net/api/pizza-cart/sp2m0YR0Af/get
+
+
+### Add a pizza to the cart
+POST https://pizza-api.projectcodex.net/api/pizza-cart/add
+Content-Type: application/json
+
+{
+    "cart_code": "sp2m0YR0Af",
+    "pizza_id": 1
+}
+
+### Remove from the cart
+
+POST https://pizza-api.projectcodex.net/api/pizza-cart/remove
+Content-Type: application/json
+
+{
+    "cart_code" : "sp2m0YR0Af",
+    "pizza_id" : 1
+}
+
+### GET all the carts for a given user
+
+GET https://pizza-api.projectcodex.net/api/pizza-cart/username/Sphesihle-Mkhize
+
+### GET all the active carts for a user
+GET https://pizza-api.projectcodex.net/api/pizza-cart/username/Sphesihle=Mkhize/active
+
+### Pay for a pizza from the cart
+POST https://pizza-api.projectcodex.net/api/pizza-cart/pay
+content-type: application/json
+
+{
+    "cart_code" : "sp2m0YR0Af",
+    "amount" : 400
+}
+
+
+### Featured Items To Get
+GET https://pizza-api.projectcodex.net/api/pizzas/featured?username=Mkhize-Mkhize
+
+##### Set a given pizza id to be featured - max 3 ids
+POST https://pizza-api.projectcodex.net/api/pizzas/featured
+content-type: application/json
+
+{
+    "username": "Sphesihle-Mkhize",
+    "pizza_id": 4
+}
+
+ CLI: https://tailwindcss.com/docs/installation
